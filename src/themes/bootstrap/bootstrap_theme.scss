@@ -1,0 +1,20 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+$bootstrap-theme: (
+  font-size: 15px,
+  font-family:"Helvetica Neue, Helvetica, Arial, sans-serif",
+  
+  //colors
+  primary: $blue,
+  secondary: #dc2a2a,
+  btn-bg:$orange,
+  btn-color:$link-color,
+  
+  //breakpoints
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);

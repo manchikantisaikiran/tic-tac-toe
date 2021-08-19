@@ -8,14 +8,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'tic-tac-toe';
 
-  toggleTheme(e: any) {
-    const body = document.querySelector('body');
-    if (!e.target.checked) {
-      body ? body.className = '' : null;
-      body?.classList.add('bootstrap');
-    } else {
-      body ? body.className = '' : null;
-      body?.classList.add('material');
+  ngOnInit(){
+    const html = document.querySelector('html');
+    html?.classList.add('custom');
+  }
+
+  toggleTheme(theme: any) {
+    const html = document.querySelector('html');
+    html ? html.className = '' : null;
+    if (theme == "custom") {
+      html?.classList.add('custom');
+    } else if(theme == "bootstrap") {
+      html?.classList.add('bootstrap');
+    }else{
+      html?.classList.add('material');
     }
   }
 }

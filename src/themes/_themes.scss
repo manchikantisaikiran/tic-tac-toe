@@ -1,0 +1,11 @@
+//all available themes in project
+
+@import "./custom/custom_theme.scss";
+@import "./bootstrap/bootstrap_theme.scss";
+@import "./material/material_theme.scss";
+
+$themes: (
+  custom: $custom-theme,
+  bootstrap:$bootstrap-theme,
+  material:$material-theme
+);

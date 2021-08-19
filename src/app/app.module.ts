@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SquareComponent } from './square/square.component';
-import { BoardComponent } from './board/board.component';
+import { SquareComponent } from './components/square/square.component';
+import { BoardComponent } from './components/board/board.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ButtonDirective } from './button.directive';
@@ -16,7 +16,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { ColorsDirective } from './colors.directive'
+import { ColorsDirective } from './colors.directive';
+import { SliderComponent } from './UI/slider/slider.component'
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { ColorsDirective } from './colors.directive'
     SquareComponent,
     BoardComponent,
     ButtonDirective,
-    ColorsDirective
+    ColorsDirective,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,9 @@ import { ColorsDirective } from './colors.directive'
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSliderModule,
+    // MDBBootstrapModulesPro.forRoot()
     // MatSidenavContainer,
     // MatSidenavContent
     // ServiceWorkerModule.register('ngsw-worker.js', {

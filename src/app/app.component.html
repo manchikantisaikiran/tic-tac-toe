@@ -1,6 +1,32 @@
-<label class="switch">
+<!-- <label class="switch">
     <input type="checkbox" (change)="toggleTheme($event)">
     <span class="slider round"></span>
-</label>
+</label> -->
+
+<header>
+  <div class="themes">
+    <ng-container>
+      <span>Themes</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-caret-down-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+        />
+      </svg>
+    </ng-container>
+    <div class="theme-links">
+      <a (click)="toggleTheme('custom')">Custom</a>
+      <a (click)="toggleTheme('bootstrap')">Bootstrap</a>
+      <a (click)="toggleTheme('material')">Material</a>
+    </div>
+  </div>
+</header>
+
 <app-board></app-board>
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>

@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <h1>Range Slider</h1>
+  <!-- [ngClass]="{
+    show: sliderToDisplay == 'custom',
+    hide: sliderToDisplay != 'custom'
+  }" -->
+
+  <ng-container>
+    <div
+      class="slidecontainer custom-slider"
+    >
+      <input
+        type="range"
+        min="1"
+        max="100"
+        value="50"
+        class="slider"
+        id="myRange"
+        #input
+      />
+    </div>
+  </ng-container>
+
+  <ng-container>
+      <input type="range" class="form-range bootstrap-slider" id="customRange1">
+      </ng-container>
+
+  <ng-container>
+    <mat-slider
+      thumbLabel
+      [displayWith]="formatLabel"
+      tickInterval="1000"
+      step="1000"
+      min="0"
+      max="100000"
+      aria-label="units"
+      class="material-slider"
+    ></mat-slider>
+  </ng-container>
+</div>

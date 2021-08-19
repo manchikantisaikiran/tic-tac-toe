@@ -1,0 +1,46 @@
+@import '../../../themes/utils/mixins/create_styles';
+main {
+  display: grid;
+  grid-template-columns: 9.5em 9.5em 9.5em;
+  grid-gap: 0px;
+}
+
+app-square {
+  border: 1px gray solid;
+  height: 9.5em;
+}
+
+div {
+  width: 80%;
+  margin: auto;
+}
+
+.wrapper {
+  display: flex;
+  margin-top: 2em;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px;
+}
+
+button {
+  // background: #76B3FA;
+  border-radius: 100px;
+  padding: 20px 40px;
+  text-decoration: none;
+  font-size: 0.75em;
+  //   margin: 0 15px;
+  @include create-theme-styles((background-color: btn-bg,color: btn-color),'component');
+}
+
+/* Hover state animation applied here */
+button:hover {
+  -webkit-animation: hover 1200ms linear 2 alternate;
+  animation: hover 1200ms linear 2 alternate;
+}

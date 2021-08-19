@@ -1,9 +1,23 @@
-@import "./themes/custom/custome.scss";
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+@import './themes/utils/mixins/create_styles';
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p,button{
+  font-family: inherit !important;
+}
 
 body {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 100%;
-  align-items: center;
+  @include create-theme-styles((font-size:font-size,font-family:font-family));
+}
+
+.player1{
+  @include create-theme-styles((color:primary));
+}
+
+.player2{
+  @include create-theme-styles((color:secondary));
 }

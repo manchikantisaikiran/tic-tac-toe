@@ -1,0 +1,11 @@
+@use "sass:map";
+@import '../../custom/custom_theme.scss';
+@import '../../themes';
+
+@function color($color,$colors:$custom-theme) {
+  @return map.get($colors, $color);
+}
+
+@function value-from-theme($theme,$color) {
+  @return map-get(map-get($themes, $theme), $color);
+}
